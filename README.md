@@ -1,5 +1,5 @@
-# Python 
+# Python tutorial
 
-### Python Tutorial on lists, dictionaries, functions, etc.
+### Python tutorial on lists, dictionaries, functions, etc.
 
 
