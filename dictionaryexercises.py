@@ -24,4 +24,6 @@ answer = dict(person)
 
 answer = {char:0 for char in 'aeiou'} 
 
-answer = dict.fromkeys("aeiou", 0) 
+answer = dict.fromkeys("aeiou", 0)
+
+answer = {count: chr(count) for count in range(65,91)} 
