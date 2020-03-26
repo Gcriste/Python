@@ -2,3 +2,10 @@ months = ('January' , 'February', 'March', 'April', 'May', 'June','July', 'Augus
 
 for month in months:
     print(month)
+
+
+# while loop
+i = len(months) - 1
+while i >= 0:
+    print(months[i])
+    i =- 1 
