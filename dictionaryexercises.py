@@ -23,3 +23,5 @@ person = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
 answer = dict(person)
 
 answer = {char:0 for char in 'aeiou'} 
+
+answer = dict.fromkeys("aeiou", 0) 
