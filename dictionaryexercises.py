@@ -21,3 +21,5 @@ answer = {k:v for k,v in person}
 
 person = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
 answer = dict(person)
+
+answer = {char:0 for char in 'aeiou'} 
