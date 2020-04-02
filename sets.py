@@ -12,5 +12,13 @@ s.add({9})
 
 
 s.remove({3})
-#would print 
+#would print . If you try to remove something that doesn't exist, you will get an error
 1,2,9,4,5
+
+s.discard({8})
+#would print . If you try to remove something that doesn't exist, you won't get an error
+1,2,9,4,5
+
+s.copy()
+# prints
+1,2,3,9,4,5
