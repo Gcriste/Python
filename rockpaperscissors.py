@@ -29,7 +29,7 @@ elif player == "paper":
     elif computer == "scissors":
         print("The Computer wins!")
 
-elif player "scissors":
+elif player == "scissors":
     if computer == "paper":
         print("You win!")
     elif computer == "rock":
