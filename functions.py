@@ -1,2 +1,4 @@
 def name_of_function():
-    print(poop)
+    print("poop")
+
+result = name_of_function()
