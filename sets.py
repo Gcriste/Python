@@ -1,3 +1,5 @@
+#sets are lists that have no specific order and you cannot use the index to find the thing in the set
+
 s = set({1,2,3,4,5})
 
 # no duplicates
