@@ -1,4 +1,5 @@
-def name_of_function():
-    print("poop")
+def square(num):
+    return num * num
 
-result = name_of_function()
+print(square(4))
+print(square(8))
