@@ -1,3 +1,27 @@
+#RETURN_DAY
+#Check to make sure num isn't < 0 or  > 6.  
+#Return the corresponding day. Use days[num-1] because return_day(1) should return 0th item in list.
+def return_day(num):
+    days = ["Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    # Check to see if num valid
+    if num > 0 and num <= len(days):
+        # use num - 1 because lists start at 0 
+        return days[num-1]
+    return None
+#BONUS ADVANCED VERSION:
+
+#Here's a more advanced solution that involves error handling, which we have not covered yet.  It eliminates the need to check to see if num is a valid index in the list. We cover this in the debugging section, but I thought you may want to see if now.
+
+def return_day(num):
+    try:
+        return ["Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"][num-1]
+    except IndexError as e:
+        return None
+
+
+
+
+
 #NUMBER COMPARE
 def number_compare(a,b):
     if a > b:
@@ -5,6 +29,8 @@ def number_compare(a,b):
     elif b > a:
         return "Second is greater"
     return "Numbers are equal"
+
+
 
 
 #SINGLE LETTER COUNT
@@ -21,6 +47,8 @@ def multiple_letter_count(string):
     return {letter: string.count(letter) for letter in string}
 
 
+
+
 #LIST_MANIPULATION
 def list_manipulation(collection, command, location, value=None):
     if(command == "remove" and location == "end"):
@@ -33,3 +61,16 @@ def list_manipulation(collection, command, location, value=None):
     elif(command == "add" and location == "end"):
         collection.append(value)
         return collection
+
+
+#IS_PALINDROME
+#Here's the simpler version that doesn't ignore whitespace.  I reverse the string using a slice [::-1] and compare that to the original string, which returns True or False.  
+
+def is_palindrome(string):
+    return string == string[::-1]
+#The Bonus Version:
+#For the more advanced version that ignores whitespace, I first remove all whitespace from the input string using a string method called replace() . What I'm actually doing is replacing all spaces(" ") with empty strings ("").  I save the result to a new variable I call stripped .  Then, I simply check if stripped is a palindrome, using the same logic I did in the previous solution.
+
+def is_palindrome(string):
+    stripped = string.replace(" ", "")
+    return stripped == stripped[::-1]
