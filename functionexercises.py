@@ -1,3 +1,10 @@
+#PRODUCT
+def product(a,b):
+    return a*b
+
+
+
+
 #RETURN_DAY
 #Check to make sure num isn't < 0 or  > 6.  
 #Return the corresponding day. Use days[num-1] because return_day(1) should return 0th item in list.
