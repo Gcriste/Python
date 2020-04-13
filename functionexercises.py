@@ -113,4 +113,78 @@ def capitalize(string):
     return string[:1].upper() + string[1:]
 
 
-    
+
+#COMPACT
+##You can write compact  in a nice single line of code.  How compact!
+
+def compact(l):
+    return [val for val in l if val]
+#Without a list comprehension
+#I make a list to store all truthy values
+#I iterate over each value in the list
+#I check if the value is truthy (using a simple if val )
+#If the value is truthy, add it to the truthy_vals  list
+return truthy_vals  at the end
+def compact(l):
+    truthy_vals = []
+    for val in l:
+        if val: truthy_vals.append(val)
+    return truthy_vals
+
+
+
+
+
+#INTERSECTION
+#Manual Looping Solution
+#Here's one potential solution:
+
+#Define an empty list that will eventually store the in common values
+#Loop through one list (l1)
+#For each value, check if that value is in the other list (l2)
+#If it is, append the value to the in_common list
+#Return in_common  after the loop ends
+def intersection(l1, l2):
+    in_common = []
+    for val in l1:
+        if val in l2:
+            in_common.append(val)
+    return in_common
+#List Comprehension Solution
+#The first solution is perfectly valid.  It's a more "traditional" way of solving the problem.  A more Python-ic solution involves using a list comprehension to do the same thing on a single line. Both work just as well.  It's a matter of personal preference, so don't get too caught up in it!
+
+def intersection(l1, l2):
+    return [val for val in l1 if val in l2]
+
+
+#Sets Solution
+#This solution(submitted by Sebastian on the discussion boards) is the most efficient of the three.  It converts the lists to sets, which removes duplicate values, and then finds the intersection of them using &.  If you need review, watch the sets section again (it's super short).
+
+def intersection(list1, list2):
+    return [val for val in set(list1) & set(list2)]
+
+
+#PARTITION
+#Here's my solution that doesn't use a list comprehension:
+
+#I have two lists, to hold the true and false values
+#I loop through the list, calling fn  with each value in the list
+#If the result is True, I append the value to the trues  list
+#Otherwise, I append the value to the falses  list
+#At the end I return a list that contains both the trues  and falses  lists
+def partition(lst, fn):
+    trues = []
+    falses = []
+    for val in lst:
+        if fn(val):
+            trues.append(val)
+        else:
+            falses.append(val)
+    return [trues, falses]
+
+
+#Another Solution
+#This solution was submitted by a student named Jonathan.  Thanks, Jonathan!
+
+def partition(l, callback):
+    return [[l.pop(l.index(i)) for i in l if callback(i)],l]
