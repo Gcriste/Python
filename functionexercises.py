@@ -19,7 +19,13 @@ def return_day(num):
         return None
 
 
+#LAST_ELEMENT
+#First check to see if the list exists (if it has data in it).  If it does, return the -1 item (last item).  Otherwise, return None.
 
+def last_element(l):
+    if l:
+        return l[-1]
+    return None
 
 
 #NUMBER COMPARE
@@ -74,3 +80,10 @@ def is_palindrome(string):
 def is_palindrome(string):
     stripped = string.replace(" ", "")
     return stripped == stripped[::-1]
+
+
+#FREQUENCY
+#using the built-in count() method, this is really nice and easy:
+
+def frequency(collection, searchTerm):
+    return collection.count(searchTerm)
