@@ -18,9 +18,11 @@ display_names(**names)
 
 
 
-def add_and_multiply(a,b,c):
+def add_and_multiply(a,b,c, **kargs):
     print (a+b * c)
+    print('OTHER STuff...')
+    print(kargs)
 
-data = dict(a=1,b=2,c=3)
+data = dict(a=1,b=2,c=3, d="55", name="Griffin")
 
 add_and_multiply(**data)
