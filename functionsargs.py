@@ -12,3 +12,9 @@ def sum_nums(*args):
 
 print(sum_nums(3,4,51,0))
 print(sum_nums(4,-3,5,6))
+
+
+
+def contains_purple(*args):
+    if "purple" in args: return True
+    return False
