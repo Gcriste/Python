@@ -26,3 +26,21 @@ def add_and_multiply(a,b,c, **kargs):
 data = dict(a=1,b=2,c=3, d="55", name="Griffin")
 
 add_and_multiply(**data)
+add_and_multiply(**data, cat ="blue")
+
+
+# def calculate(**kwargs):
+#     operation_lookup = {
+#         'add': kwargs.get('first', 0) + kwargs.get('second', 0),
+#         'subtract': kwargs.get('first', 0) - kwargs.get('second', 0),
+#         'divide': kwargs.get('first', 0) / kwargs.get('second', 0),
+#         'multiply': kwargs.get('first', 0) * kwargs.get('second', 0)
+#     }
+#     is_float = kwargs.get('make_float', False)
+#     operation_value = operation_lookup[kwargs.get('operation', '')]
+#     if is_float:
+#         final = "{} {}".format(kwargs.get('message','The result is'), float(operation_value))
+#     else:
+#         final = "{} {}".format(kwargs.get('message','The result is'), int(operation_value))
+#     return final
+
